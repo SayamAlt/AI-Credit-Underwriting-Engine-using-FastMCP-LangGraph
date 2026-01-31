@@ -9,3 +9,5 @@ graphviz
 langchain-mcp-adapters
 streamlit
 python-dotenv
+requests
+pydantic
