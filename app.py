@@ -1,6 +1,6 @@
-from agent.graph import workflow
+from graph import workflow
 import asyncio
-from agent.state import ApplicantState, CreditState
+from state import ApplicantState, CreditState
 from langchain_core.messages import HumanMessage
 import streamlit as st
 from auth_utils import register_user, load_users, verify_password

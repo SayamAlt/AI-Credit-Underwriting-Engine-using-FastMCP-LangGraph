@@ -1,6 +1,6 @@
 import os, asyncio, json, sys
 from langgraph.graph import StateGraph, START, END
-from agent.state import CreditState
+from state import CreditState
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from graphviz import Digraph
 
