@@ -95,6 +95,7 @@ if "user_role" in st.session_state and st.session_state["user_role"]:
                     )
                 ]
             )
+            
             result = asyncio.run(workflow.ainvoke(credit_state.model_dump()))
                         
             st.success("✅ Credit Evaluation Completed")
