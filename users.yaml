@@ -1,0 +1,11 @@
+cookie:
+  expiry_days: 1
+  key: credit-risk-app
+  name: credit-auth
+credentials:
+  usernames:
+    alice29:
+      email: alice@gmail.com
+      name: Alice Winston
+      password: $2b$12$Qjb2dSMdq4GzEmb./GBAeuWuvvLFjAnSivHhOmjstKf32ZzC4sR6y
+      role: applicant
