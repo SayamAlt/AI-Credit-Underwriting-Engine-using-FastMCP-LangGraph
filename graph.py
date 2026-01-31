@@ -81,6 +81,15 @@ tools_map = {tool.name: tool for tool in mcp_tools}
 print(f"Tools loaded: {list(tools_map.keys())}")
 
 def _parse_result(result):
+    # Handle list of content blocks from MCP tools
+    if isinstance(result, list):
+        # If it's a list of content blocks like [{'type': 'text', 'text': '...'}]
+        if len(result) > 0 and isinstance(result[0], dict) and "text" in result[0]:
+            result = result[0]["text"]
+        # If it's a list of Message objects
+        elif len(result) > 0 and hasattr(result[0], "content"):
+            result = result[0].content
+            
     if isinstance(result, str):
         try:
             return json.loads(result)
